@@ -1,4 +1,4 @@
 let firstname="vruttik";
-let message="Welcome";
+let greeting="Welcome";
 
-console.log("Welcome"+" "+"Vruttik");
+
