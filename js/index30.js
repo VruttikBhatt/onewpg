@@ -1,4 +1,3 @@
-const side=10;
-const perimeter= side *4;
+const side=5;
 const are=side*side;
-console.log(perimeter of )
+console.log(`the square perimeter of ${side} is the side length ${side*5}`);
