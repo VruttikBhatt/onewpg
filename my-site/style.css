@@ -1,0 +1,25 @@
+body {
+    background:url("technology-2019.jpg") center no-repeat;
+    height: 100vh;
+    background-size: cover;
+
+    
+}
+  
+  .menudropdown1{
+width: 75%;
+height:100px;
+margin: 0px auto;
+
+  }
+.menudropdown1 ul{
+
+}
+.menudropdown1 ul li{
+    float: left;
+    background-color: black;
+    color: white;
+    widows: 200px;
+    list-style: none;
+    padding: opx
+}
