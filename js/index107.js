@@ -1,5 +1,12 @@
-function biggerNumber(firstNumber=3, secondNumber=5){
-    return firstNumber+secondNumber;
+function biggerNumber(firstNumber,secondNumber) {
+    if (firstNumber>secondNumber) {
+    return console.log(firstNumber,'is bigger than',secondNumber)   
+    } else if (firstNumber<secondNumber) {
+        return console.log(firstNumber,'is lesser than',secondNumber)   
+    } else if (firstNumber==secondNumber) {
+        return console.log(firstNumber,'is equals to',secondNumber)   
+    }
 }
-console.log(`Number ${firstNumber} is bigger than ${secondNumber}`);
 
+biggerNumber(9,10);
+biggerNumber(10,10);
