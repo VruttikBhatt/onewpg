@@ -11,5 +11,4 @@ else if(hour>18 && hour<22) {
 }
  else {
     console.log('Good night');
-
-  }
+}

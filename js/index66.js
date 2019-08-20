@@ -4,3 +4,4 @@ while(number<11){
     console.log(number);
     number++;
 }
+

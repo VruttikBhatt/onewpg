@@ -1,8 +1,8 @@
-let result=0;
-let index=0;
+let result=[];
+let index=20;
 
-while(index<=1000){
-//console.log(index);
-result+=index;
-console.log(partial Number)
+while(index>0){
+result.push(index);
+console.log(result);
+index=index-1;
 }
