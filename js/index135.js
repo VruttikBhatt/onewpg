@@ -7,7 +7,7 @@ let arrMutant = ['Professor X',
     'Phoenix',
     'Logan',
     'Gambit'];
-let i = 0
+let i = 0;
 arrMutant.forEach(function(arrMutant,ind) {
     console.log(arrMutant,ind);
 });
