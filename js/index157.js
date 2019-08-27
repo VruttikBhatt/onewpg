@@ -78,26 +78,15 @@ const games=[
         console: "XBOX"
       }
    ];
-//    function showDetail() {
-//     console.log(`name: ${this.name}
-//            price: ${this.price}
-//            sold: ${this.sold}
-//            console: ${this.console}
-//            `);
-// }
-
-// games.forEach(function(game){showDetail(game)});
-// games.forEach(game=>showDetail(game));
-// games.forEach(showDetail);
-
-
-const allowed=['console:"PS4"'];
-
-const filtered=Object.console(games)
-.filter(console=>allowed.includes(console))
-.reduce((obj, console) => {
-    obj[console] = games[console];
-    return obj;
-  }, {});
-
-console.log(filtered);
+const ps4Games=games.filter(
+  game =>{
+    return game.console==='PS4';
+  }
+);
+const xboxGames=games.filter(
+  game =>{
+    return game.console==='XBOX';
+  }
+);
+console.log(ps4Games);
+console.log(xboxGames);
