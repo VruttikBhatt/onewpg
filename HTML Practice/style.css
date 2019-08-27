@@ -1,0 +1,16 @@
+.warning {
+    border: 50px ridge;
+    background-color: red;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.warning{
+    width: 100%;
+}
+
+.warning{
+    font: small-caps 1.2rem sans-serif;
+    text-align: center;
+}
