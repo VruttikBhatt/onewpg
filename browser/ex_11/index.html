@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Interval Exercise</title>
+<script>
+        window.onload = function() {
+        const userName = prompt("Input your Username");
+        const password = prompt("Input your Password");
+        if (userName) {
+          alert(`Welcome ${userName}`);
+        }
+        setTimeout(function() {
+          const loginConfirm = confirm("Do you still want to be logged?");
+          if (loginConfirm) {
+            console.log(`${userName} your session has been restored`);
+          } else {
+            console.log(`${userName} your session has expaired`);
+          }
+        }, 10000);
+      };
+</script>
+</head>
+<body>
+    
+</body>
+</html>

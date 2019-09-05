@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elements</title>
+  <style>
+    .red {
+      color: red;
+    }
+    
+    .green {
+      color: green;
+    }
+    
+    .orange {
+      color: orange;
+    }
+  </style>
+  <script>
+  window.onload = function() {
+  const listElement = document.querySelector("ul");
+  const firstChild = listElement.children[0];
+  firstChild.classList.add("orange");
+  firstChild.nextElementSibling.classList.add("orange");
+  listElement.children[1].nextElementSibling.classList.add("orange");
+  listElement.children[2].nextElementSibling.classList.add("orange");
+  listElement.children[3].nextElementSibling.classList.add("orange");
+  listElement.children[3].previousElementSibling.classList.remove("orange");
+  listElement.children[3].previousElementSibling.classList.add("red");
+  listElement.children[1].previousElementSibling.classList.remove("orange");
+  listElement.children[1].previousElementSibling.classList.add("green");
+  console.log(listElement);
+};
+  
+  
+  </script>
+</head>
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+</body>
+</html>

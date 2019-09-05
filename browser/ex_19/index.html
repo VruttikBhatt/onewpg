@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>document</title>
+  <style>
+    .bold {
+      font-weight: bold;
+    }
+    .striked {
+      text-decoration: line-through;
+    }
+  </style>
+  <script>
+  window.onload = function() {
+  const h1Element = document.querySelector("h1");
+  const divElement = document.querySelector("div");
+  const strikedClass = function(element) {
+    console.log(element);
+    element.hasAttributes()
+      ? element.classList.add("bold")
+      : element.classList.add("striked");
+  };
+  strikedClass(h1Element);
+  console.log(h1Element);
+  strikedClass(divElement);
+  console.log(divElement);
+};
+  </script>
+</head>
+<body>
+  <h1 id="main">Playing with attributes</h1>
+   <div >We have more control over our documents as we learn about JavaScript and DOM elements!!!
+   </div>
+</body>
+</html>
