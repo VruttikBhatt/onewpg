@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Events</title>
+    <script>
+        const clickHandler = function () {
+            alert('You clicked an event listened element');
+        }
+        const dblClickhandler = function () {
+            const body = document.querySelector('body');
+            const childrenLength = body.children.length;
+            const ul = document.createElement('ul');
+            for (let i = 0; i <= childrenLength - 1; i++) {
+                let content = body.children[i].innerText;
+                let li = document.createElement('li');
+                li.innerText = content;
+                ul.appendChild(li);
+            }
+            body.appendChild(ul);
+        }
+        window.onload = function () {
+            const firstButton = document.querySelector('#firstButton');
+            const secondButton = document.querySelector('#secondButton');
+            firstButton.addEventListener('click', clickHandler);
+            secondButton.addEventListener('dblclick', dblClickhandler);
+        }
+    </script>
+</head>
+
+<body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+</body>
+
+</html>

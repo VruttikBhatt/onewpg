@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        window.onload = function () {
+            const bodyElement = document.querySelector('body');
+            console.log(bodyElement);
+            const ulElement = document.createElement('ul');
+            const names = ['Vruttik', 'YEsha', 'Nicolas', 'Sofia', 'Meena', 'Kirit', 'Josh', 'Joyce', 'Fraince', 'Fawad'];
+            names.forEach(function (name) {
+                const listItems = document.createElement('li');
+                listItems.innerHTML = name;
+                ulElement.appendChild(listItems);
+                document.body.appendChild(ulElement);
+            });
+        }
+    </script>
+    <title>It's all JavaScript Baby!!</title>
+</head>
+
+<body>
+</body>
+
+</html>

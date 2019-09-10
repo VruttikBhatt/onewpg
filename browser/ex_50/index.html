@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form elements event</title>
+  <style>
+    .error { 
+      color: red; 
+      background-color: pink;
+      border: 1px solid red;
+      padding: 5px;
+    }
+  </style>
+  <script>
+  window.onload = function() {
+  const form = document.querySelector("form");
+  const div = document.querySelector("div");
+  const submit = document.querySelector("input[type='submit']");
+  const regex = /^[a-z0-9]+$/i;
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  submit.addEventListener("click", function() {
+    form.onsubmit = () => {
+      event.preventDefault();
+      const username = document.querySelector("input[name='username']");
+      const pass = document.querySelector("input[name='pass']");
+      const email = document.querySelector("input[name='email']");
+      div.innerHTML = "";
+      if (
+        username.value &&
+        pass.value &&
+        email.value &&
+        regex.test(username.value) &&
+        regex.test(pass.value) &&
+        emailRegex.test(email.value)
+      ) {
+        div.classList.remove("error");
+        div.innerHTML = "";
+      } else {
+        if (username.value || pass.value || email.value) {
+          const span = document.createElement("p");
+          span.innerHTML = "Please input a username, password, and email";
+          div.classList.add("error");
+          div.append(span);
+        }
+      }
+      if (
+        !regex.test(username.value) ||
+        !regex.test(pass.value) ||
+        !emailRegex.test(email.value)
+      ) {
+        const span = document.createElement("p");
+        span.innerHTML = "username, password, and email or valid";
+        div.classList.add("error");
+        div.append(span);
+      }
+    };
+  });
+};
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" placeholder="username" />
+    <input type="password" id="pass" name="pass" placeholder="password"/>
+    <input type="text" id="email" name="email" placeholder="email">
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div id="errors"></div>
+</body>
+</html>

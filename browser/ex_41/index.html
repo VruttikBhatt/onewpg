@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 41</title>
+    <style>
+    .striked{
+    text-decoration: line-through;    
+      }
+    li{
+    cursor: pointer;
+    }
+</style>
+<script>
+    window.onload = function() {
+  const list = document.createElement("ul");
+  const weeklyChores = [
+    "cooking",
+    "moping",
+    "kitchen cleaning",
+    "whashing clothes",
+    "organizing closet", 
+  ];
+  const strikedToggle = function() {
+    event.target.classList.toggle("striked");
+  };
+  weeklyChores.forEach(chore => {
+    const listItem = document.createElement("li");
+    listItem.innerHTML = chore;
+    listItem.addEventListener("click", strikedToggle);
+    list.append(listItem);
+  });
+  const body = document.querySelector("body");
+  body.append(list);
+};
+</script>
+</head>
+<body>
+    
+</body>
+</html>
